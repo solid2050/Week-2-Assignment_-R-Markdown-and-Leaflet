@@ -1,0 +1,20 @@
+---
+title: "Week 2 Assignment: R Markdown and Leaflet"
+author: "Mohamed Hussien"
+date: "17. May 2020"
+output: html_document
+---
+
+
+```{r, include=FALSE, }
+library(leaflet)
+```
+
+```{r, echo=FALSE}
+my_map <- leaflet() %>% 
+  addTiles()
+my_map <- my_map %>%
+addCircleMarkers(lat=47.36962, lng=8.526008,
+popup="Hello fom Zurich! Thanks for good grades!")
+my_map
+```
